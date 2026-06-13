@@ -17,3 +17,13 @@
 # 17 - Coleta data-lançamento
 # 18 - Retorna
 # 19 - Coleta proximo mangá
+
+from selenium import webdriver;
+from selenium.webdriver.common.by import By;
+import os;
+from time import sleep;
+
+driver = webdriver.Chrome('https://mundosinfinitos.com.br/');
+driver.get('');
+sleep(5);
+
