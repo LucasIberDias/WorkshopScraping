@@ -1,7 +1,7 @@
 # 1 - entrar no site = https://mundosinfinitos.com.br/
 # 2 - Abrir barra de pesquisa
 # 3 - Colocar nome do mangá
-# 4 - Apertar o botão de busca
+# 4 - Apertar o botão de busca / enter
 # 5 - Abre o primeiro mangá que nome == mangá
 # 6 - Seleciona Todas as edições
 # 7 - Seleciona ordenar
@@ -18,33 +18,45 @@
 # 18 - Retorna
 # 19 - Coleta proximo mangá
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from time import sleep
+from selenium import webdriver;
+from selenium.webdriver.common.by import By;
+from selenium.webdriver.common.keys import Keys;
+from time import sleep;
+import os;
 
 # 1 - entrar no site = https://mundosinfinitos.com.br/
 # Seleciona o site que vou pegar os dados, e da um tempo de 5 segundos de espera para garantir que não vai tentar pegar dados sem o site ter sido aberto totalmente
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome();
 
 # Maximiza a janela para a barra de pesquisa ficar visível
-driver.maximize_window()
+driver.maximize_window();
 
 # Abre a URL colocada
-driver.get("https://mundosinfinitos.com.br/")
-sleep(5)
+driver.get("https://mundosinfinitos.com.br/");
+sleep(5);
 
 # 2 - Abrir barra de pesquisa
 # 3 - Colocar nome do mangá
 # Seleciona a barra de pesquisa e coloca o nome do mangá
 
-nome_manga = input("Digite o nome do mangá para busca: ")
-barra_pesquisa = driver.find_element(By.ID, "search_txt")
-barra_pesquisa.click()
+nome_manga = input("Digite o nome do mangá para busca: ");
+barra_pesquisa = driver.find_element(By.ID, "search_txt");
+barra_pesquisa.click();
 
-# Digita o nome e aperta ENTER
-barra_pesquisa.send_keys(nome_manga)
-barra_pesquisa.send_keys(Keys.ENTER)
+# Digita o nome e aperta enter
+barra_pesquisa.send_keys(nome_manga);
+barra_pesquisa.send_keys(Keys.ENTER);
+sleep(5);
 
-sleep(10)
+# Pega os nomes de mangás da página
+mangasDaPagina = driver.find_elements(By.XPATH, "//div[@class='area-infos']//div[@class='descricao']//h4/a");
+
+# Apenas um arquivo para que eu faça uma comparação dos mangás da página
+with open('mangas.csv', 'a', encoding='utf-8') as arquivo:
+    for manga in mangasDaPagina:
+        arquivo.write(f'{manga.text}{os.linesep}');
+
+print("Mangás Coletados");
+
+sleep(10);
