@@ -49,14 +49,7 @@ barra_pesquisa.send_keys(nome_manga);
 barra_pesquisa.send_keys(Keys.ENTER);
 sleep(5);
 
-# Pega os nomes de mangás da página
-mangasDaPagina = driver.find_elements(By.XPATH, "//div[@class='area-infos']//div[@class='descricao']//h4/a");
+# Abre o Primeiro Mangá
 
-# Apenas um arquivo para que eu faça uma comparação dos mangás da página
-with open('mangas.csv', 'a', encoding='utf-8') as arquivo:
-    for manga in mangasDaPagina:
-        arquivo.write(f'{manga.text}{os.linesep}');
-
-print("Mangás Coletados");
 
 sleep(10);
