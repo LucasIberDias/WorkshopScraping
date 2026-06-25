@@ -56,12 +56,28 @@ Automatizar o processo de:
 
 https://devaprender-play.netlify.app/
 
-### Tecnologias utilizadas
+## Ferramentas Utilizadas
 
-* Python
-* Selenium
-* XPath
-* Manipulação de Arquivos
+<div align="center">
+
+<img width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/>
+<img width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
+
+<img width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+
+</div>
+
+<br>
+
+| Ferramenta | Descrição |
+|------------|------------|
+| VS Code | Ambiente de desenvolvimento utilizado durante o workshop |
+| Python | Linguagem utilizada para desenvolver os crawlers |
+| Selenium | Biblioteca responsável pela automação do navegador |
+| Git | Controle de versão do projeto |
+| CSV | Armazenamento dos dados coletados |
+| XPath | Localização e navegação entre elementos HTML |
+| Chrome / Chromium | Navegador utilizado durante a automação |
 
 ### Resultado esperado
 
