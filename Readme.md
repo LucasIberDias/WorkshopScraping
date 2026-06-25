@@ -127,6 +127,11 @@ Instale as dependências:
 ```bash
 pip install selenium
 ```
+Em casos de não ser o usuário principal:
+
+```bash
+python3 -m venv selenium_env && source selenium_env/bin/activate && pip install --upgrade pip && pip install selenium
+```
 
 ---
 
