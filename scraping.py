@@ -1,4 +1,4 @@
-# Repita os passos manuais, usando código
+8# Repita os passos manuais, usando código
 
 # 1° entrar no site = https://devaprender-play.netlify.app/
 # 2° Anotar o nome do primeiro produto
@@ -30,3 +30,5 @@ for produto, preco in zip(produtos, precos):
 
 
 input('');
+
+python3 -m venv selenium_env && source selenium_env/bin/activate && pip install --upgrade pip && pip install selenium
