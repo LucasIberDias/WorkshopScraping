@@ -157,13 +157,13 @@ python3 -m venv selenium_env && source selenium_env/bin/activate && pip install 
 ### Crawler Básico
 
 ```bash
-python crawler.py
+python scraping.py
 ```
 
 ### Crawler Avançado
 
 ```bash
-python crawlerAvancado.py
+python scrapingAvancado.py
 ```
 
 ---
