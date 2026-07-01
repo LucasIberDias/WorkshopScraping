@@ -129,13 +129,14 @@ https://mundosinfinitos.com.br/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+[git clone https://github.com/seu-usuario/seu-repositorio.git
+](https://github.com/LucasIberDias/WorkshopScraping.git)
 ```
 
 Acesse a pasta:
 
 ```bash
-cd seu-repositorio
+cd WorkshopScraping
 ```
 
 Instale as dependências:
